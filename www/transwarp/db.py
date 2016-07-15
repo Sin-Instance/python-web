@@ -457,6 +457,7 @@ def update(sql, *args):
 	return _update(sql, *args)
 
 if __name__=='__main__':
+	print 'test db'
 	logging.basicConfig(level=logging.DEBUG)
 	create_engine('user', 'password', 'test')
 	update('drop table if exists user')
