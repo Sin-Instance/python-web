@@ -2,6 +2,10 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+'''
+Database operation module.
+'''
+
 import time, uuid, functools, threading, logging
 
 # Dict object
