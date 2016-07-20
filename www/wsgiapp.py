@@ -9,7 +9,8 @@ A WSGI application entry.
 
 import logging; logging.basicConfig(level=logging.INFO)
 
-import os
+import os, time
+from datetime import datetime
 
 from transwarp import db
 from transwarp.web import WSGIApplication, Jinja2TemplateEngine
@@ -42,6 +43,8 @@ wsgi.template_engine = template_engine
 
 import urls
 
+wsgi.add_interceptor(urls.user_interceptor)
+wsgi.add_interceptor(urls.manage_interceptor)
 wsgi.add_module(urls)
 
 if __name__ == '__main__':
