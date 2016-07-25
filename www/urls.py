@@ -10,7 +10,7 @@ from apis import api, APIError, APIValueError, APIPermissionError, APIResourceNo
 from models import User, Blog, Comment
 from config import configs
 
-_COOKIE_NAME = 'awesession'
+_COOKIE_NAME = 'magcesession'
 _COOKIE_KEY = configs.session.secret
 
 def make_signed_cookie(id, password, max_age):
